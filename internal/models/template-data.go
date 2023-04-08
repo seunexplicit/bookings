@@ -1,5 +1,7 @@
 package models
 
+import "github.com/seunexplicit/bookings/internal/forms"
+
 type TemplateData struct {
 	StringMap map[string]string
 	FloatMap  map[string]float32
@@ -10,4 +12,5 @@ type TemplateData struct {
 	Flash     string
 	Warning   string
 	Error     string
+	Form      *forms.Form
 }
