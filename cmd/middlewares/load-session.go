@@ -3,7 +3,7 @@ package middlewares
 import (
 	"net/http"
 
-	"github.com/seunexplicit/bookings/pkg/config"
+	"github.com/seunexplicit/bookings/internal/config"
 )
 
 var appConfig *config.AppConfig

@@ -8,9 +8,9 @@ import (
 
 	"github.com/alexedwards/scs/v2"
 	"github.com/seunexplicit/bookings/cmd/middlewares"
-	"github.com/seunexplicit/bookings/pkg/config"
-	"github.com/seunexplicit/bookings/pkg/handlers"
-	"github.com/seunexplicit/bookings/pkg/render"
+	"github.com/seunexplicit/bookings/internal/config"
+	"github.com/seunexplicit/bookings/internal/handlers"
+	"github.com/seunexplicit/bookings/internal/render"
 )
 
 const port = ":8080"
@@ -25,7 +25,7 @@ func main() {
 
 	render.LoadAppConfig(&appConfig)
 	middlewares.LoadAppConfig(&appConfig)
-	
+
 	repo := handlers.NewRepository(&appConfig)
 	handlers.NewHandler(repo)
 
